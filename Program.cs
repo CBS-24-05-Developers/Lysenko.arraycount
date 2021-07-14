@@ -19,7 +19,8 @@ namespace test
         static void Main()
         {
             MyClass[] Array = new MyClass[10];
-StartPoint:
+            int arraycount = 0;
+        StartPoint:
             Console.WriteLine("A :");
             string a = Console.ReadLine();
             Console.WriteLine("B :");
@@ -29,7 +30,6 @@ StartPoint:
                        
             Console.WriteLine("Save?");
             string save = Console.ReadLine();
-            int arraycount = 0;
             
             if (save == "yes")
             {
@@ -47,9 +47,9 @@ StartPoint:
 
             for (int i = 0; i <= arraycount; i++)
             {
-                Console.WriteLine(Array[i].a);
-                Console.WriteLine(Array[i].b);
-                Console.WriteLine(Array[i].c);
+                Console.WriteLine(Array[i]?.a);
+                Console.WriteLine(Array[i]?.b);
+                Console.WriteLine(Array[i]?.c);
                 Console.WriteLine(new string('-', 20));
             }
 
